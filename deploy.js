@@ -21,7 +21,7 @@ try {
   // Удаляем всё, кроме .git
   const files = fs.readdirSync('.');
   files.forEach(file => {
-    if (file !== '.git') fs.removeSync(file);
+    if (file !== '.git' && file !== 'node_modules') fs.removeSync(file);
   });
 
   // Копируем из временной папки в корень
